@@ -1,5 +1,9 @@
 # Engineering Playbook
 
+*Building better systems, one problem at a time.*
+
+---
+
 Welcome!
 
 This repository is my living engineering reference—a growing collection of notes, case studies, design ideas, troubleshooting guides, and lessons learned while building and supporting data-driven systems.
