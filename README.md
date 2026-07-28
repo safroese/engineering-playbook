@@ -1,6 +1,10 @@
+<div align="center">
+
 # Engineering Playbook
 
 *Building better systems, one problem at a time.*
+
+</div>
 
 ---
 
