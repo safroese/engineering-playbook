@@ -8,19 +8,39 @@ They continue to evolve as I gain experience.
 
 ## Engineering Philosophy
 
-> **Problem**  
-> ↓  
-> **Investigate**  
-> ↓  
-> **Design**  
-> ↓  
-> **Build**  
-> ↓  
-> **Automate**  
-> ↓  
-> **Document**  
-> ↓  
-> **Improve**
+┌───────────┐
+│  Problem  │
+└───────────┘
+      │
+      ▼
+┌──────────────┐
+│ Investigate  │
+└──────────────┘
+      │
+      ▼
+┌───────────┐
+│  Design   │
+└───────────┘
+      │
+      ▼
+┌───────────┐
+│   Build   │
+└───────────┘
+      │
+      ▼
+┌────────────┐
+│ Automate   │
+└────────────┘
+      │
+      ▼
+┌────────────┐
+│ Document   │
+└────────────┘
+      │
+      ▼
+┌───────────┐
+│  Improve  │
+└───────────┘
 
 Every project begins with understanding the problem and ends with capturing what was learned. Each solution becomes part of a growing body of knowledge that can be reused, improved, and built upon in the future.
 
