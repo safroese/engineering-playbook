@@ -8,6 +8,7 @@ They continue to evolve as I gain experience.
 
 ## Engineering Philosophy
 
+```text
 ┌───────────┐
 │  Problem  │
 └───────────┘
@@ -41,6 +42,7 @@ They continue to evolve as I gain experience.
 ┌───────────┐
 │  Improve  │
 └───────────┘
+```
 
 Every project begins with understanding the problem and ends with capturing what was learned. Each solution becomes part of a growing body of knowledge that can be reused, improved, and built upon in the future.
 
