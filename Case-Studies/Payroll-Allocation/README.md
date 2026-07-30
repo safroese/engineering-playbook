@@ -13,6 +13,19 @@
 
 ---
 
+## Skills Demonstrated
+
+- SQL Server Development
+- Stored Procedure Design
+- Financial Data Modeling
+- Data Validation
+- Process Automation
+- Business Analysis
+- Systems Integration
+- Performance Optimization
+
+---
+
 ## Overview
 
 The Payroll Allocation Automation project replaced a complex, manual payroll allocation process with a fully automated SQL Server solution. The system calculates payroll expense allocations based on employee service activity, allowing Finance to generate accurate allocation reports for any reporting period with minimal manual effort.
