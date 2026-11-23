@@ -71,6 +71,12 @@ For example, a supervisor change may require moving an employee's shape, while a
 
 The comparison logic also supports situations where multiple attributes change together.
 
+The comparison uses a saved snapshot representing the last completed organizational chart update. This snapshot is not refreshed automatically.
+
+As a result, changes remain detectable until they have been incorporated into the Visio charts and the snapshot is explicitly committed.
+
+This prevents outstanding updates from disappearing simply because another scheduled data refresh has occurred.
+
 ### 4. Automated Update Notifications
 
 Power Automate runs a scheduled process that retrieves outstanding organizational chart changes from SQL Server.
@@ -85,9 +91,21 @@ The process runs daily and avoids sending routine change emails when no updates 
 
 The charts remain editable in Visio, allowing organizational changes to be reviewed and applied before publication.
 
-Updated charts are published as PDFs for staff access through Microsoft 365 collaboration tools.
+After completing the necessary chart updates, the updated charts are published as PDFs for staff access through Microsoft 365 collaboration tools.
 
-This approach preserves human oversight while automating the repetitive work of identifying and communicating changes.
+The SQL comparison snapshot is then manually committed to establish the new baseline for future change detection.
+
+This creates a controlled maintenance cycle:
+
+1. Detect changes in the HR data.
+2. Generate actionable update notifications.
+3. Review and apply changes in Visio.
+4. Publish updated organizational charts.
+5. Commit the new SQL snapshot.
+
+Until the snapshot is committed, outstanding changes remain visible to the detection process.
+
+This approach combines automated monitoring with an explicit acknowledgment step, helping ensure that changes are not inadvertently overlooked.
 
 ## Engineering Decisions
 
@@ -104,6 +122,16 @@ This balances automation with maintainability and human review.
 Maintaining a comparison snapshot allows the system to identify meaningful differences rather than repeatedly reviewing the entire organizational structure.
 
 This supports consistent change detection and reduces unnecessary manual effort.
+
+### Explicit Snapshot Commit
+
+The comparison snapshot is updated manually after organizational chart changes have been completed, rather than automatically on a schedule.
+
+This was an intentional design choice to preserve outstanding changes until they have been addressed.
+
+The snapshot therefore represents the last completed chart maintenance cycle, providing a reliable baseline for subsequent comparisons.
+
+Separating change detection from change acknowledgment improves operational reliability without requiring a more complex workflow management system.
 
 ### Make Notifications Actionable
 
